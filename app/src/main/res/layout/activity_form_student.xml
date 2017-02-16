@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp">
+        <ImageView
+            android:id="@+id/iv_student_photo"
+            android:src="@drawable/person"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"/>
+        <Button
+            android:id="@+id/bt_camera"
+            android:background="@drawable/background_bt_photo"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="64dp"
+            android:layout_height="64dp"/>
+
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/et_student_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome" />
+    <EditText
+        android:id="@+id/et_student_phone"
+        android:hint="Telefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_student_address"
+        android:hint="Endereço"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_student_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+    <EditText
+        android:id="@+id/et_student_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Idade" />
+    <RatingBar
+        android:id="@+id/rb_student_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:max="5"/>
+
+</LinearLayout>
