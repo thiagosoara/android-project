@@ -19,6 +19,7 @@ import android.widget.Toast;
 import java.text.Normalizer;
 import java.util.List;
 
+import br.unibratec.pmb.cap2.adapter.StudentAdapter;
 import br.unibratec.pmb.cap2.dao.StudentDAO;
 import br.unibratec.pmb.cap2.model.Student;
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         students = dao.getStudents();
         dao.close();
         lvAlunos = (ListView) findViewById(R.id.lv_students);
-        ArrayAdapter<Student> adapter = new ArrayAdapter<Student>(this, android.R.layout.simple_list_item_1, students);
+        StudentAdapter adapter = new StudentAdapter(this, students);
         lvAlunos.setAdapter(adapter);
     }
 
