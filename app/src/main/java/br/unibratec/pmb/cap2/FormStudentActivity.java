@@ -78,7 +78,10 @@ public class FormStudentActivity extends AppCompatActivity {
                 //Criar conexão com o banco de dados
                 StudentDAO studentDAO = new StudentDAO(this);
                 //inserir o objeto Student
-                studentDAO.save(student);
+                if (student.getId() != null)
+                    studentDAO.update(student);
+                else
+                    studentDAO.save(student);
                 //fechar conexão com o banco de dados
                 studentDAO.close();
                 finish();

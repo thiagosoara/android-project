@@ -25,22 +25,26 @@
         android:id="@+id/et_student_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         android:hint="Nome" />
     <EditText
         android:id="@+id/et_student_phone"
         android:hint="Telefone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="phone"/>
     <EditText
         android:id="@+id/et_student_address"
         android:hint="Endereço"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"/>
     <EditText
         android:id="@+id/et_student_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:hint="Email"
+        android:inputType="textUri"/>
     <EditText
         android:id="@+id/et_student_age"
         android:layout_width="match_parent"

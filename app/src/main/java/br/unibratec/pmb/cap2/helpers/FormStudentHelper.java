@@ -25,6 +25,7 @@ public class FormStudentHelper {
     private EditText emailField;
     private EditText ageField;
     private RatingBar rateField;
+    private Student student;
 
     public FormStudentHelper(FormStudentActivity activity) {
         photoField = (ImageView) activity.findViewById(R.id.iv_student_photo);
@@ -37,7 +38,6 @@ public class FormStudentHelper {
     }
 
     public Student getStudent() {
-        Student student = new Student();
         student.setPhoto((String) photoField.getTag());
         student.setName(nameField.getText().toString());
         student.setPhone(phoneField.getText().toString());
@@ -67,5 +67,6 @@ public class FormStudentHelper {
         ageField.setText(String.valueOf(student.getAge()));
         rateField.setProgress(student.getRate().intValue());
         loadImage(student.getPhoto());
+        this.student = student;
     }
 }
