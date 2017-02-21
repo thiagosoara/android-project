@@ -92,4 +92,13 @@ public class StudentDAO extends SQLiteOpenHelper{
         values.put("photo", student.getPhoto());
         return values;
     }
+
+    public boolean is_student(String phone) {
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT phone FROM Students WHERE phone = ?";
+
+        Cursor cursor = db.rawQuery(sql, new String[] {phone});
+        return (cursor.getCount() > 0);
+    }
 }
