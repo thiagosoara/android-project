@@ -11,8 +11,8 @@ public class Student implements Serializable {
     private Long id;
     private String photo;
     private String name;
-    private String Phone;
-    private String Address;
+    private String phone;
+    private String address;
     private String email;
     private Integer age;
     private Float rate;
@@ -34,19 +34,19 @@ public class Student implements Serializable {
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getEmail() {
